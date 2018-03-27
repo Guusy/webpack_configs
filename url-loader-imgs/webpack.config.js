@@ -26,6 +26,15 @@ module.exports = {
 					presets:['es2015']
 				}
 			}
+		},
+		{
+			test:/\.(jpg|png|gif)$/,
+			use:{
+				loader:'url-loader',
+				options:{
+					limit:100000
+				}
+			}
 		}
 		]
 	},
