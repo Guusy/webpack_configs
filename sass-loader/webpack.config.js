@@ -19,6 +19,15 @@ module.exports = {
 			}) 
 		},
 		{
+			test: /\.scss$/, //que tipo de archivo quiero reconocer exp regular
+			use: ExtractTextPlugin.extract({
+				//['style-loader','css-loader']//que loader usar
+				//fallback:'style-loader',
+				use:['css-loader','sass-loader']
+			}) 
+		}
+		,
+		{
 			test: /\.js$/, 
 			use: {
 				loader:'babel-loader',
